@@ -1,72 +1,30 @@
 {% extends 'base.html' %}
 
-{% load staticfiles %}
+{% load staticfiles thumbnail %}
 
 {% block content %}
     <section class="home-slider uk-grid uk-grid-collapse uk-child-width-1-2@m" uk-height-match="target: &gt; ul">
         <ul class="slider-nav">
-            <li class="uk-flex uk-flex-middle">
-                <div class="text uk-flex uk-flex-middle" data-padding="350">
-                    <div>
-                        <h5>Добро пожаловать!</h5>
-                        <h3>Центр современной неврологии</h3>
-                        <p>
-                            Мы предоставляем высочайший уровень
-                            медицинского сервиса и используем новейшие
-                            технологии и инновации
-                        </p><a href="">Подробнее</a>
+            {% for slide in sliders %}
+                <li class="uk-flex uk-flex-middle">
+                    <div class="text uk-flex uk-flex-middle" data-padding="350">
+                        <div>
+                            <h5>Добро пожаловать!</h5>
+                            <h3>{{ slide.title }}</h3>
+                            <p>{{ slide.description }}</p><a href="">Подробнее</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="uk-flex uk-flex-middle">
-                <div class="text uk-flex uk-flex-middle" data-padding="350">
-                    <div>
-                        <h5>Добро пожаловать!</h5>
-                        <h3>Центр современной неврологии</h3>
-                        <p>
-                            Мы предоставляем высочайший уровень
-                            медицинского сервиса и используем новейшие
-                            технологии и инновации
-                            Мы предоставляем высочайший уровень
-                            медицинского сервиса и используем новейшие
-                            технологии и инновации
-
-                        </p><a href="">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-flex uk-flex-middle">
-                <div class="text uk-flex uk-flex-middle" data-padding="350">
-                    <div>
-                        <h5>Добро пожаловать!</h5>
-                        <h3>Центр современной неврологии</h3>
-                        <p>
-                            Мы предоставляем высочайший уровень
-                            медицинского сервиса и используем новейшие
-                            технологии и инновации
-                        </p><a href="">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-flex uk-flex-middle">
-                <div class="text uk-flex uk-flex-middle" data-padding="350">
-                    <div>
-                        <h5>Добро пожаловать!</h5>
-                        <h3>Центр современной неврологии</h3>
-                        <p>
-                            Мы предоставляем высочайший уровень
-                            медицинского сервиса и используем новейшие
-                            технологии и инновации
-                        </p><a href="">Подробнее</a>
-                    </div>
-                </div>
-            </li>
+                </li>
+            {% endfor %}
         </ul>
         <ul class="slider-for uk-visible@m">
-            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
-            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
-            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
-            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
+            {% for slide in sliders %}
+                <li class="uk-cover-container">
+                {% thumbnail slide.image "x600" as im %}
+                    <img data-lazy="{{ im.url }}" alt="" uk-cover="">
+                {% endthumbnail %}
+                </li>
+            {% endfor %}
         </ul>
     </section>
     <section class="treatment">
@@ -119,7 +77,8 @@
                     <div class="item uk-margin">
                         <div class="uk-grid uk-margin-remove-left uk-flex-middle" uk-grid="">
                             <div class="uk-width-auto@s">
-                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a1.png' %}" alt=""></div>
+                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a1.png' %}"
+                                                                                alt=""></div>
                             </div>
                             <div class="uk-width-expand@s uk-text-left@s uk-text-center">
                                 <div class="uk-card-body uk-padding-remove-left">
@@ -133,7 +92,8 @@
                     <div class="item uk-margin">
                         <div class="uk-grid uk-margin-remove-left uk-flex-middle" uk-grid="">
                             <div class="uk-width-auto@s">
-                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a2.png' %}" alt=""></div>
+                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a2.png' %}"
+                                                                                alt=""></div>
                             </div>
                             <div class="uk-width-expand@s uk-text-left@s uk-text-center">
                                 <div class="uk-card-body uk-padding-remove-left">
@@ -147,7 +107,8 @@
                     <div class="item uk-margin">
                         <div class="uk-grid uk-margin-remove-left uk-flex-middle" uk-grid="">
                             <div class="uk-width-auto@s">
-                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a3.png' %}" alt=""></div>
+                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a3.png' %}"
+                                                                                alt=""></div>
                             </div>
                             <div class="uk-width-expand@s uk-text-left@s uk-text-center">
                                 <div class="uk-card-body uk-padding-remove-left">
@@ -265,7 +226,8 @@
                 <div>
                     <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                         <div class="uk-position-relative">
-                            <div class="uk-cover-container"><img class="lazy" data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
+                            <div class="uk-cover-container"><img class="lazy"
+                                                                 data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
                                                                  uk-cover="">
                                 <canvas width="600" height="420"></canvas>
                             </div>
@@ -282,7 +244,8 @@
                 <div>
                     <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                         <div class="uk-position-relative">
-                            <div class="uk-cover-container"><img class="lazy" data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
+                            <div class="uk-cover-container"><img class="lazy"
+                                                                 data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
                                                                  uk-cover="">
                                 <canvas width="600" height="420"></canvas>
                             </div>
@@ -299,7 +262,8 @@
                 <div>
                     <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                         <div class="uk-position-relative">
-                            <div class="uk-cover-container"><img class="lazy" data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
+                            <div class="uk-cover-container"><img class="lazy"
+                                                                 data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
                                                                  uk-cover="">
                                 <canvas width="600" height="420"></canvas>
                             </div>
