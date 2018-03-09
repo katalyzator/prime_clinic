@@ -63,10 +63,10 @@
             </li>
         </ul>
         <ul class="slider-for uk-visible@m">
-            <li class="uk-cover-container"><img data-lazy="img/jpg/slider1.jpg" alt="" uk-cover=""></li>
-            <li class="uk-cover-container"><img data-lazy="img/jpg/slider1.jpg" alt="" uk-cover=""></li>
-            <li class="uk-cover-container"><img data-lazy="img/jpg/slider1.jpg" alt="" uk-cover=""></li>
-            <li class="uk-cover-container"><img data-lazy="img/jpg/slider1.jpg" alt="" uk-cover=""></li>
+            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
+            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
+            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
+            <li class="uk-cover-container"><img data-lazy="{% static 'img/jpg/slider1.jpg' %}" alt="" uk-cover=""></li>
         </ul>
     </section>
     <section class="treatment">
@@ -75,7 +75,7 @@
             <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s"
                  uk-height-match="target: &gt; div &gt; .item &gt; p" uk-grid="">
                 <div>
-                    <div class="item" uk-parallax="bgy: -500"><img src="img/png/tr1.png" alt="">
+                    <div class="item" uk-parallax="bgy: -500"><img src="{% static 'img/png/tr1.png' %}" alt="">
                         <h3>Голова</h3>
                         <p>Это самый распространённый вид головной боли в мире — каждый из нас испытал её хотя бы раз в
                             жизни. Повторяются они не часто, хроническую форму приобретают в 3% случаев.</p><a
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="item" uk-parallax="bgy: -500"><img src="img/png/tr2.png" alt="">
+                    <div class="item" uk-parallax="bgy: -500"><img src="{% static 'img/png/tr2.png' %}" alt="">
                         <h3>Спина</h3>
                         <p>Это самый распространённый вид головной боли в мире боли в мире боли в мире — каждый из нас
                             испытал её хотя бы раз в жизни. Повторяются они не часто, хроническую форму приобретают в 3%
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="item" uk-parallax="bgy: -500"><img src="img/png/tr3.png" alt="">
+                    <div class="item" uk-parallax="bgy: -500"><img src="{% static 'img/png/tr3.png' %}" alt="">
                         <h3>Суставы</h3>
                         <p>Это самый распространённый вид головной боли в мире — каждый из нас испытал её хотя бы раз в
                             жизни. Повторяются они не часто, хроническую форму приобретают в 3% случаев.</p><a
@@ -105,7 +105,7 @@
         <div class="uk-container">
             <div class="uk-grid uk-grid-large uk-child-width-1-2@m" uk-grid="">
                 <div>
-                    <div class="uk-text-center"><img src="img/png/logo2.png" alt="">
+                    <div class="uk-text-center"><img src="{% static 'img/png/logo2.png' %}" alt="">
                         <div class="uk-margin-large">
                             <p>With our anniversary coming soon, we can proudly so state that we are the oldest
                                 pharmaceutical companies in the US and the world.</p>
@@ -119,7 +119,7 @@
                     <div class="item uk-margin">
                         <div class="uk-grid uk-margin-remove-left uk-flex-middle" uk-grid="">
                             <div class="uk-width-auto@s">
-                                <div class="uk-text-left@s uk-text-center"><img src="img/png/a1.png" alt=""></div>
+                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a1.png' %}" alt=""></div>
                             </div>
                             <div class="uk-width-expand@s uk-text-left@s uk-text-center">
                                 <div class="uk-card-body uk-padding-remove-left">
@@ -133,7 +133,7 @@
                     <div class="item uk-margin">
                         <div class="uk-grid uk-margin-remove-left uk-flex-middle" uk-grid="">
                             <div class="uk-width-auto@s">
-                                <div class="uk-text-left@s uk-text-center"><img src="img/png/a2.png" alt=""></div>
+                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a2.png' %}" alt=""></div>
                             </div>
                             <div class="uk-width-expand@s uk-text-left@s uk-text-center">
                                 <div class="uk-card-body uk-padding-remove-left">
@@ -147,7 +147,7 @@
                     <div class="item uk-margin">
                         <div class="uk-grid uk-margin-remove-left uk-flex-middle" uk-grid="">
                             <div class="uk-width-auto@s">
-                                <div class="uk-text-left@s uk-text-center"><img src="img/png/a3.png" alt=""></div>
+                                <div class="uk-text-left@s uk-text-center"><img src="{% static 'img/png/a3.png' %}" alt=""></div>
                             </div>
                             <div class="uk-width-expand@s uk-text-left@s uk-text-center">
                                 <div class="uk-card-body uk-padding-remove-left">
@@ -169,7 +169,7 @@
                 <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                     <div class="img-wrapper">
                         <div class="badge">трамватолог</div>
-                        <img data-lazy="img/jpg/vra4.jpg" alt="">
+                        <img data-lazy="{% static 'img/jpg/vra4.jpg' %}" alt="">
                     </div>
                     <div class="name">
                         <h4>Наталья Кункевич</h4>
@@ -182,7 +182,7 @@
                 <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                     <div class="img-wrapper">
                         <div class="badge">трамватолог</div>
-                        <img data-lazy="img/jpg/vra4.jpg" alt="">
+                        <img data-lazy="{% static 'img/jpg/vra4.jpg' %}" alt="">
                     </div>
                     <div class="name">
                         <h4>Наталья Кункевич</h4>
@@ -195,7 +195,7 @@
                 <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                     <div class="img-wrapper">
                         <div class="badge">трамватолог</div>
-                        <img data-lazy="img/jpg/vra4.jpg" alt="">
+                        <img data-lazy="{% static 'img/jpg/vra4.jpg' %}" alt="">
                     </div>
                     <div class="name">
                         <h4>Наталья Кункевич</h4>
@@ -208,7 +208,7 @@
                 <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                     <div class="img-wrapper">
                         <div class="badge">трамватолог</div>
-                        <img data-lazy="img/jpg/vra4.jpg" alt="">
+                        <img data-lazy="{% static 'img/jpg/vra4.jpg' %}" alt="">
                     </div>
                     <div class="name">
                         <h4>Наталья Кункевич</h4>
@@ -221,7 +221,7 @@
                 <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                     <div class="img-wrapper">
                         <div class="badge">трамватолог</div>
-                        <img data-lazy="img/jpg/vra4.jpg" alt="">
+                        <img data-lazy="{% static 'img/jpg/vra4.jpg' %}" alt="">
                     </div>
                     <div class="name">
                         <h4>Наталья Кункевич</h4>
@@ -234,7 +234,7 @@
                 <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                     <div class="img-wrapper">
                         <div class="badge">трамватолог</div>
-                        <img data-lazy="img/jpg/vra4.jpg" alt="">
+                        <img data-lazy="{% static 'img/jpg/vra4.jpg' %}" alt="">
                     </div>
                     <div class="name">
                         <h4>Наталья Кункевич</h4>
@@ -265,12 +265,12 @@
                 <div>
                     <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                         <div class="uk-position-relative">
-                            <div class="uk-cover-container"><img class="lazy" data-src="img/jpg/advantages.jpg" alt=""
+                            <div class="uk-cover-container"><img class="lazy" data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
                                                                  uk-cover="">
                                 <canvas width="600" height="420"></canvas>
                             </div>
                             <div class="icon uk-flex-inline uk-flex-middle uk-flex-center">
-                                <div><img src="img/png/ad1.png" alt=""></div>
+                                <div><img src="{% static 'img/png/ad1.png' %}" alt=""></div>
                             </div>
                         </div>
                         <div class="about">
@@ -282,12 +282,12 @@
                 <div>
                     <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                         <div class="uk-position-relative">
-                            <div class="uk-cover-container"><img class="lazy" data-src="img/jpg/advantages.jpg" alt=""
+                            <div class="uk-cover-container"><img class="lazy" data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
                                                                  uk-cover="">
                                 <canvas width="600" height="420"></canvas>
                             </div>
                             <div class="icon uk-flex-inline uk-flex-middle uk-flex-center">
-                                <div><img src="img/png/ad1.png" alt=""></div>
+                                <div><img src="{% static 'img/png/ad1.png' %}" alt=""></div>
                             </div>
                         </div>
                         <div class="about">
@@ -299,12 +299,12 @@
                 <div>
                     <div class="item uk-box-shadow-small uk-box-shadow-hover-large">
                         <div class="uk-position-relative">
-                            <div class="uk-cover-container"><img class="lazy" data-src="img/jpg/advantages.jpg" alt=""
+                            <div class="uk-cover-container"><img class="lazy" data-src="{% static 'img/jpg/advantages.jpg' %}" alt=""
                                                                  uk-cover="">
                                 <canvas width="600" height="420"></canvas>
                             </div>
                             <div class="icon uk-flex-inline uk-flex-middle uk-flex-center">
-                                <div><img src="img/png/ad1.png" alt=""></div>
+                                <div><img src="{% static 'img/png/ad1.png' %}" alt=""></div>
                             </div>
                         </div>
                         <div class="about">
