@@ -14,3 +14,10 @@ def index_view(request):
     template = 'main/index.html'
 
     return render(request, template, context)
+
+
+def contacts_view(request):
+    context = {}
+    template = 'app/contacts.html'
+
+    return render(request, template, context)
